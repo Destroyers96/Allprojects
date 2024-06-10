@@ -1,0 +1,630 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url("bg-img.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: "Poppins",sans-serif;
+    letter-spacing: 0.3px;
+}
+
+/*Header*/
+
+header{
+    background-color: #2d2f35;
+    padding: 15px 40px 15px 40px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    z-index: 3;
+}
+
+header .ri-node-tree{
+    margin-left: 105px;
+    margin-top: -4px;
+    font-size: 40px;
+    position: absolute;
+}
+
+.sticky{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+.navbar{
+    list-style: none;
+    display: flex;
+}
+
+li{
+    margin-left: 20px;
+}
+
+.h{
+    color: #1d4ed8;
+    font-size: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.h:hover{
+    color: #000;
+}
+
+a{
+    text-decoration: none;
+    color: #ededed;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+a:hover{
+    color: #1d4ed8;
+}
+
+button{
+    background-color: #1d4ed8;
+    border-color: #1d4ed8;
+    color: #fff;
+    border-radius: 5px;
+    padding: 4px 8px;
+    border-style: solid;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
+button:hover{
+    background-color: #18338e; ;
+    border-color: #18338e;
+}
+
+.btn:hover{
+    color: #fff;
+}
+
+/*Page blanche*/
+
+.text-blank{
+    align-items: center;
+    justify-content: center;
+    border-radius: 40px;
+    margin-left: 175px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    width: 75%;
+    height: auto;
+    background-color: #dbd8d8;
+    padding: 20px 30px 25px 30px;
+}
+
+/*Tous*/
+
+.text-blank h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:dodgerblue;
+    padding-top: 20px;
+    font-weight: 700;
+}
+
+.text-blank h4{
+    font-size: 20px;
+    margin: 20px 0 30px 0;
+    transition: all 0.3s ease;
+}
+
+.text-blank p{
+    margin:10px 0 20px 0;
+    text-align: justify;
+}
+
+/*Page accueil et contactez-nous*/
+
+.text{
+    border-radius: 30px;
+    width: 50%;
+    background-color: rgba(255, 255, 255,0.1);
+    backdrop-filter: blur(7px);
+    padding: 20px 30px 25px 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.text h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+/*Sommaire*/
+
+.text-blank2 h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:dodgerblue;
+    padding-top: 20px;
+    font-weight: 700;
+}
+
+.text-blank2 p{
+    margin:10px 0 20px 0;
+    text-align: justify;
+}
+
+.text-blank2 .summary li{
+    margin: 20px 0 10px 100px;
+}
+
+.text-blank2 .summary a{
+    color: #000;
+    font-size: 20px;
+    font-weight: 400;
+    margin-left: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.text-blank2 .summary a:hover{
+    color: cadetblue;
+}
+
+.text-blank2 .span span{
+    margin-left: 150px;
+    font-size: large;
+}
+
+.text-blank2 .span a{
+    font-size: 18px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.text-blank2 .span :hover{
+    color: cadetblue;
+}
+
+/*Definition*/
+
+.text-blank4 h3{
+    text-align: center;
+    font-weight: 700;
+    font-size: 23px;
+    color: darkslateblue;
+    margin-top: 10px;
+}
+.text-blank4 .donnes video{
+    width: 50%;
+    display: block;
+    margin: auto;
+    z-index: 1;
+}
+.text-blank4 li{
+    margin: 20px 0 10px 50px;
+    color:steelblue;
+}
+.text-blank4 ul p{
+    margin-left: 65px;
+    margin-right: 80px;
+}
+.text-blank4 table{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    
+}
+.text-blank4 table th{
+    padding: 20px;
+    border-radius: 20px;
+    background-color:burlywood ;
+}
+.text-blank4 table td{
+    padding: 8px;
+    border-radius: 20px;
+    width: 50%;
+    text-align: center;
+    background-color:burlywood;
+}
+#border{
+    border-right: none;
+}
+/*Page histoire et evolution*/
+
+.text-blank3 h1{
+    margin-bottom: 25px;
+}
+
+.text-blank3 h3{
+    text-align: center;
+    font-weight: 600;
+    font-size: 23px;
+    color: darkslateblue;
+}
+
+.text-blank3 .margin{
+    margin-bottom: -5px;
+}
+
+.text-blank3 .donnes img{
+    width: 80%;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    filter: brightness(90%);
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+/*Technologie*/
+
+.text-blank5 .AI h3{
+    text-align: center;
+    font-weight: 600;
+    font-size: 23px;
+    color: darkslateblue;
+}
+
+.text-blank5 h5{
+    text-align: center;
+    font-weight: 600;
+    color: rgba(71, 61, 139, 0.652);
+}
+
+.text-blank5 .AI p{
+    margin-bottom: -1px;
+}
+.text-blank5 li{
+    margin: 20px 0 10px 50px;
+    color: steelblue;
+}
+.text-blank5 ul p{
+    margin-left: 65px;
+    margin-right: 80px;
+}
+#data{
+    margin-top: 10px;
+}
+#space{
+    margin-top: 20px;
+    margin-bottom: -1px;
+}
+
+/*Sécurité*/
+
+.text-blank7 h4{
+    margin-bottom: -8px;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: 600;
+    color: darkslateblue;
+}
+.text-blank7 p{
+    margin-bottom: -1px;
+}
+.text-blank7 li{
+    margin: 20px 0 10px 50px;
+    color: steelblue;
+}
+.text-blank7 ul p{
+    margin-left: 65px;
+    margin-right: 80px;
+}
+
+/*Pourquoi s'investir dans Fintech ?*/
+.text-blank6 li{
+    margin: 20px 0 10px 50px;
+    color: steelblue;
+}
+.text-blank6 ul p{
+    margin-left: 65px;
+    margin-right: 80px;
+}
+.text-blank6 .stats img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+}
+.text-blank6 img{
+    width: 65%;
+}
+/*Page contactez-nous*/
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.text1{
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255,0.1);
+    backdrop-filter: blur(7px);
+    padding: 20px 30px 25px 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    margin-top: 150px;
+}
+
+.text1 h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ccc;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+input.name,.email{
+    background: linear-gradient(90deg, #1CB5E0 0%, #000851 100%);
+    padding: 10px 15px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    width: 50%;
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+textarea{
+    outline: none;
+    background: linear-gradient(90deg, #1CB5E0 0%, #000851 100%);
+    border-radius: 5px;
+    margin-bottom: 8px;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    width: 80%;
+}
+
+::placeholder{
+    color: #fff;
+}
+
+input.send{
+    background-color: #1d4ed8;
+    border-color: #1d4ed8;
+    border-style: none;
+    padding: 10px 15px;
+    outline: none;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+input.send:hover{
+    background-color: #18338e; ;
+    border-color: #18338e;
+}
+
+/*Cotactez-nous grid*/
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+    justify-items: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.telephone,.mail,.location{
+    background-color: #272727;
+    width: 250px;
+    height: 175px;
+    padding: 10px;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.mail:hover{
+    background-color: #404040;
+    border-color: #fff;
+    color: #fff;
+}
+
+.mcci{
+    color: #000;
+}
+
+.location:hover{
+    background-color: #404040;
+    border-color: #fff;
+    color: #fff;
+}
+
+.telephone:hover{
+    background-color: #404040;
+    border-color: #fff;
+    color: #fff;
+}
+
+.mail{
+    width:350px;
+}
+
+.cards h4{
+    font-weight: 700;
+}
+
+.cards,.i, h4{
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.cards span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 3rem;
+    color:rgb(61, 231, 219);
+}
+
+@media (width < 1500px){
+    header{
+        width: 100%;
+    }
+    .navbar{
+        list-style: none;
+        display: flex;
+    }
+    .text{
+        margin-top: 100px;
+        width: 90%;
+    }
+    .text-blank{
+        width: 90%;
+        margin-left: 35px;
+    }
+    .text1{
+        margin-top: 200px;
+        width: 90%;
+        z-index: -1;
+    }
+    .cards{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .text-blank3 img{
+        width: 80%;
+    }
+    .text-blank4 img{
+        width: 65%;
+    }
+}
+@media(width < 1200px){
+    header{
+        width: 100%;
+    }
+    .navbar{
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+    }
+    .text{
+        width: 90%;
+    }
+
+    .text-blank{
+        width: 90%;
+        margin-left: 25px;
+    }
+    .text1{
+        margin-top: 500px;
+        width: 90%;
+        z-index: -1;
+    }
+    .cards{
+        grid-template-columns: 1fr 1fr;
+    }
+    .text-blank3 img{
+        width: 80%;
+    }
+    .text-blank4 img{
+        width: 65%;
+    }
+}
+@media (width < 750px) {
+    header{
+        flex-direction: column;
+        width: 100%;
+    }
+    .navbar{
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+    }
+    .text{
+        margin-top: 100px;
+        width: 90%;
+    }
+
+    .text-blank p{
+        text-align: left;
+    }
+    .text-blank2 .summary li{
+        margin: 0 0 0 -5px;
+    }
+    .text-blank2 .span span{
+        margin-left: -5px;
+    }
+    .text-blank{
+        width: 90%;
+        margin-left: 25px;
+    }
+    .text1{
+        margin-top: 800px;
+        width: 90%;
+        z-index: -1;
+    }
+    input.name{
+        width: 80%;
+    }
+    .email{
+        width: 80%;
+    }
+    textarea{
+        width: 100%;
+    }
+    .cards{
+        grid-template-columns: 1fr;
+    }
+    
+    .text-blank3 img{
+        width: 80%;
+    }
+    .text-blank4 img{
+        width: 65%;
+    }
+    .text-blank4 li{
+        margin: 20px 0 10px -7px;
+    }
+    .text-blank4 ul p{
+        margin-left: -10px;
+        margin-right: 0;
+        text-align: justify;
+    }
+    .text-blank5 li{
+        margin: 20px 0 10px -7px;
+    }
+    .text-blank5 ul p{
+        margin-left: -10px;
+        margin-right: 0;
+        text-align: justify
+    }
+    .text-blank7 li{
+        margin: 20px 0 10px -7px;
+    }
+    .text-blank7 ul p{
+        margin-left: -10px;
+        margin-right: 0;
+        text-align: justify;
+    }
+}
