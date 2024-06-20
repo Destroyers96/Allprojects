@@ -8,6 +8,7 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './user.component.html',
   styleUrls: ['./user.component.css']
 })
+
 export class UserComponent implements OnInit{
   public data:any;
   constructor(private httpClient: HttpClient){}
@@ -15,9 +16,10 @@ export class UserComponent implements OnInit{
   ngOnInit(): void {
     this.fetchData();
   }
+
   fetchData(){
     this.httpClient
-    .get('https://jsonplaceholder.typicode.com/todos/1').subscribe(
+    .get('https://jsonplaceholder.typicode.com/users').subscribe(
       (data: any) =>{
       console.log(data);
       this.data = data;

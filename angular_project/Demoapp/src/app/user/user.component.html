@@ -1,6 +1,45 @@
-<div>
-    <p><b><u>User ID</u></b> :  {{data.userId}}</p>
-    <p><b><u>ID</u></b> : {{data.id}}</p>
-    <p><b><u>Title</u></b> : {{data.title}}</p>
-    <p><b><u>Completed</u></b> : {{data.completed}}</p>
+<!-- <div class="grid">
+    @for (data of data; track data.id){
+        <div>
+            <p><b><u>User ID</u></b> :  {{data?.id}}</p>
+            <p><b><u>ID</u></b> : {{data?.name}}</p>
+            <p><b><u>Title</u></b> : {{data?.username}}</p>
+            <p><b><u>Email</u></b> : {{data?.email}}</p>
+            <p><b><u>Address</u></b> : {{data?.address}}</p>
+                <p><b><u>Street</u></b> : {{data}}</p>
+                <p><b><u>Suite</u></b> : {{data?.email}}</p>
+                <p><b><u>City</u></b> : {{data?.email}}</p>
+                <p><b><u>Zipcode</u></b> : {{data?.email}}</p>
+            <p><b><u>Geo</u></b> : {{data?.email}}</p>
+            <p><b><u>Phone</u></b> : {{data?.phone}}</p>
+            <p><b><u>Website</u></b> : {{data?.website}}</p>
+            <p><b><u>Company</u></b> : {{data?.company}}</p>
+            <p><b><u>Name</u></b> : {{data?.email}}</p>
+            <p><b><u>Name</u></b> : {{data?.email}}</p>
+        </div>
+    }
+</div> -->
+<div class="grid">
+    @for (data of data; track data.id){
+        <div>
+            <p><b><u>User ID</u></b> :  {{data?.id}}</p>
+            <p><b><u>ID</u></b> : {{data?.name}}</p>
+            <p><b><u>Title</u></b> : {{data?.username}}</p>
+            <p><b><u>Email</u></b> : {{data?.email}}</p>
+            <p><b><u>Address</u></b> :</p>
+                <p><b><u>Street</u></b> : {{data?.address.street}}</p>
+                <p><b><u>Suite</u></b> : {{data?.address.suite}}</p>
+                <p><b><u>City</u></b> : {{data?.address.city}}</p>
+                <p><b><u>Zipcode</u></b> : {{data?.address.zipcode}}</p>
+            <p><b><u>Geo</u></b> :</p>
+            <p><b><u>Laditude</u></b> : {{data?.address.geo.lat}}</p>
+            <p><b><u>Longitude</u></b> : {{data?.address.geo.lng}}</p>
+            <p><b><u>Phone</u></b> : {{data?.phone}}</p>
+            <p><b><u>Website</u></b> : {{data?.website}}</p>
+            <p><b><u>Company</u></b> :</p>
+            <p><b><u>Name</u></b> : {{data?.company.name}}</p>
+            <p><b><u>CatchPhrase</u></b> : {{data?.company.catchPhrase}}</p>
+            <p><b><u>Bs</u></b> : {{data?.company.bs}}</p>
+        </div>
+    }
 </div>

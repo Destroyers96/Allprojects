@@ -1,10 +1,27 @@
+.grid{
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px 200px;
+    width: auto;
+    border: none;
+    column-gap: 125px;
+    row-gap: 100px;
+}
+
 div{
+    padding: 20px 30px;
+    width: 200px;
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
-    padding-top: 20px;
+    border:1px solid;
 }
 
 p{
     text-align: center;
     margin-top: 0px;
+}
+
+hr{
+    width: 15%;
 }
