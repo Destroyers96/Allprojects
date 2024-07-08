@@ -1,0 +1,30 @@
+#outils{
+    margin: 40px 0 40px 0;
+}
+#icon i{
+    font-size: 60px;
+}
+@media (max-width:780px){
+    #outils{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #icon:not(:first-child){
+        margin-top: 30px;
+    }
+    #icon i{
+    font-size: 55px;
+    }
+}
+#img{
+    border-radius: 50px;
+    margin-top: 50px;
+}
+#description{
+    margin: 20px 25px 0 0;
+}
+#logos{
+    width: 100px;
+    margin: 20px 0 0 25px;
+}
