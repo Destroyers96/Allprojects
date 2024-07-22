@@ -159,23 +159,40 @@
     <!--  -->
     <!-- Third section -->
     <h2 class="text-center mt-5">...</h2>
-    <div class="d-flex justify-content-around align-items-center">
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="..." alt="Card image cap">
+    <div class="d-flex justify-content-center align-items-center" id="actualite">
+    <?php
+        include("../Database/connexion.php");
+        $section2 = "SELECT * FROM accueil WHERE ID BETWEEN 4 AND 6;";
+        $curseur = mysqli_query($bdd,$section2);
+        if ($curseur) {
+            while ($row = mysqli_fetch_assoc($curseur)){
+                $imagenews = $row["Photo"];
+                $liennews = $row["Lien"];
+                $descriptionnews = $row["Description"];
+    ?>
+        <div class="card border-0" style="width: 40rem; margin: 50px;">
+            <a href="<?php $liennews ?>"><img class="card-img-top" src="../Images/Index/Section3/<?php echo $imagenews ?>" alt="Card image cap"></a>
             <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="card-text text-center"><?php echo $descriptionnews ?></p>
             </div>
         </div>
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="..." alt="Card image cap">
+    <?php
+        }
+        mysqli_free_result($curseur);
+        } else {
+            echo "Error: " . mysqli_error($bdd);
+        }
+        mysqli_close($bdd);
+    ?>
+    </div>
+    <!--  -->
+    <!-- Section 4 -->
+    <h2 class="text-center">...</h2>
+    <div class="d-flex justify-content-center align-items-center">
+        <div class="card border-0" style="width: 40rem;">
+            <img class="card-img-top" src="../Images/Index/Section3/<?php  ?>" alt="Card image cap">
             <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="..." alt="Card image cap">
-            <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="card-text text-center"><?php   ?></p>
             </div>
         </div>
     </div>
