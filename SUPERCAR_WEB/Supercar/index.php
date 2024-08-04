@@ -23,7 +23,7 @@
         <div class="container-fluid" id="image">
             <?php
                 include("../Database/connexion.php");
-                $logo = "SELECT * FROM marque WHERE Nom = 'Supercar logo';";
+                $logo = "SELECT * FROM marque WHERE Id_marque = 1;";
                 $curseur = mysqli_query($bdd,$logo);
                 if ($curseur) {
                     $row = mysqli_fetch_assoc($curseur);
@@ -58,7 +58,7 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" id="evenements">Évènements</a>
+                        <a class="nav-link" href="evenements.php" id="evenements">Évènements</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#" id="essai">Demande d'essai</a>
@@ -82,7 +82,7 @@
     <!-- First section -->
     <?php
         include("../Database/connexion.php");
-        $section1 = "SELECT * FROM accueil a, marque b WHERE a.marque = b.Nom AND a.Id = 1;";
+        $section1 = "SELECT * FROM accueil a, marque b WHERE a.Id_marque = b.Id_marque AND a.Id = 1;";
         $curseur = mysqli_query($bdd,$section1);
         if ($curseur) {
             $row = mysqli_fetch_assoc($curseur);
@@ -121,7 +121,7 @@
     <!-- Second section -->
     <?php
         include("../Database/connexion.php");
-        $section2 = "SELECT * FROM accueil a, marque b WHERE a.marque = b.Nom AND a.Id IN (2, 3);";
+        $section2 = "SELECT * FROM accueil a, marque b WHERE a.Id_marque = b.Id_marque AND a.Id IN (2, 3);";
         $curseur = mysqli_query($bdd,$section2);
         if ($curseur) {
             while ($row = mysqli_fetch_assoc($curseur)){
@@ -184,17 +184,6 @@
         }
         mysqli_close($bdd);
     ?>
-    </div>
-    <!--  -->
-    <!-- Section 4 -->
-    <h2 class="text-center">...</h2>
-    <div class="d-flex justify-content-center align-items-center">
-        <div class="card border-0" style="width: 40rem;">
-            <img class="card-img-top" src="../Images/Index/Section3/<?php  ?>" alt="Card image cap">
-            <div class="card-body">
-                <p class="card-text text-center"><?php   ?></p>
-            </div>
-        </div>
     </div>
     <!--  -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
