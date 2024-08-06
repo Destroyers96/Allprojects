@@ -52,8 +52,8 @@
                             Voitures
                         </a>
                         <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="ferrari.php">Ferrari</a></li>
                             <li><a class="dropdown-item" href="#">Porsche</a></li>
-                            <li><a class="dropdown-item" href="#">Ferrari</a></li>
                             <li><a class="dropdown-item" href="#">Jeep</a></li>
                         </ul>
                     </li>
@@ -61,7 +61,7 @@
                         <a class="nav-link" href="evenements.php" id="evenements">Évènements</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" id="essai">Demande d'essai</a>
+                        <a class="nav-link" href="demande_essaie.php" id="essai">Demande d'essai</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#" id="contact">Contactez-nous</a>
@@ -82,17 +82,17 @@
     <!-- First section -->
     <?php
         include("../Database/connexion.php");
-        $section1 = "SELECT * FROM accueil a, marque b WHERE a.Id_marque = b.Id_marque AND a.Id = 1;";
+        $section1 = "SELECT a.Video, a.Lien, a.Description, b.Marque, b.Logo, c.Modele FROM accueil a JOIN marque b ON a.Id_marque = b.Id_marque JOIN voiture c ON a.Id_voiture = c.Id_voiture WHERE a.Id = 1;";
         $curseur = mysqli_query($bdd,$section1);
         if ($curseur) {
             $row = mysqli_fetch_assoc($curseur);
             if ($row) {
                 $video = $row["Video"];
-                $modele = $row["Modele"];
                 $lien = $row["Lien"];
                 $description = $row["Description"];
                 $marque = $row["Marque"];
                 $logo = $row["Logo"];
+                $modele = $row["Modele"];
             }
             mysqli_free_result($curseur);
         } else {
@@ -109,7 +109,7 @@
                 <img src="../Images/Logos/<?php echo $logo ?>" alt="Porsche logo" id="logos">
             </div>
             <div class="position-absolute d-flex justify-content-between align-items-end w-75 bottom-0 mb-5">
-                <h2 class="text-white w-25" id="modele"><?php echo $modele ?></h2>
+                <h3 class="text-white w-25" id="modele"><?php echo $marque, ' ', $modele ?></h3>
                 <a class="btn d-flex justify-content-center align-items-center" href="<?php echo $lien ?>" role="button" id="explorer">Explorer</a>
             </div>
         </div>
@@ -121,7 +121,7 @@
     <!-- Second section -->
     <?php
         include("../Database/connexion.php");
-        $section2 = "SELECT * FROM accueil a, marque b WHERE a.Id_marque = b.Id_marque AND a.Id IN (2, 3);";
+        $section2 = "SELECT a.Photo, a.Lien, a.Description, b.Marque, b.Logo, c.Modele FROM accueil a JOIN marque b ON a.Id_marque = b.Id_marque JOIN voiture c ON a.Id_voiture = c.Id_voiture WHERE a.Id IN (2, 3);";
         $curseur = mysqli_query($bdd,$section2);
         if ($curseur) {
             while ($row = mysqli_fetch_assoc($curseur)){
@@ -139,7 +139,7 @@
         </div>
         <div class="w-75 position-absolute">
             <div class="d-flex justify-content-center align-items-center flex-column">
-                <h3 class="text-white "><?php echo $modele ?></h3>
+                <h3 class="text-white" id="font"><?php echo $marque, ' ', $modele ?></h3>
                 <a class="btn d-flex justify-content-center align-items-center" id="explorer" href="<?php echo $lien ?>" role="button">Explorer</a>
             </div>
         </div>

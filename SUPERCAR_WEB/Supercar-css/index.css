@@ -2,9 +2,6 @@
     font-weight: 200;
     margin-left: 20px;
 }
-#slogan{
-    font-weight: 100;
-}
 #explorer{
     color: white;
     border: solid 1px white;
@@ -21,6 +18,9 @@
 #logos{
     width: 125px;
     margin: 20px 0 0 25px;
+}
+#font{
+    font-weight: 200;
 }
 #actualite img{
     border-radius: 20px;
